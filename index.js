@@ -7,18 +7,9 @@ console.log('Counter 2 : LeetCode');
 var createCounter = function(init) {
     let val = init;
     return {
-        increment: function () {
-            val = val + 1;
-            return val;
-        },
-        decrement: function () {
-            val = val - 1;
-            return val;
-        },
-        reset: function () {
-            val = init;
-            return init;
-        }
+        increment: () => ++val,
+        decrement: () => --val,
+        reset: () => val = init
     }
 };
 
